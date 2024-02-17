@@ -38,7 +38,7 @@ function playRound(playerSelection, computerSelection) {
 
 function getPlayerInput() {
     const array = ["rock", "paper", "scissors"]
-    var input = prompt("Pick Rock / Paper / Scissors?")
+    let input = prompt("Pick Rock / Paper / Scissors?")
     while (!array.includes(input.toLocaleLowerCase())) {
         input = prompt("Invalid Input! -  Pick Rock / Paper / Scissors?")
     }
@@ -47,19 +47,19 @@ function getPlayerInput() {
 }
 
 function game() {
-    var roundsWon = 0;
-    var roundsLost = 0;
+    let roundsWon = 0;
+    let roundsLost = 0;
     for (let index = 0; index < 5; index++) {
         console.log("===================================")
         console.log("======= ROCK PAPER SCISSORS =======")
         console.log(`== Round won ${roundsWon} of 5  ===`)
         console.log(`== Round lost ${roundsLost} of 5  ===`)
         console.log("===================================")
-        var playerSelection = getPlayerInput();
-        var computerSelection = computerPlay();
+        let playerSelection = getPlayerInput();
+        let computerSelection = computerPlay();
         console.log(`Computer pick : ${computerSelection}`)
         console.log(`Your pick : ${playerSelection}`)
-        var result = playRound(playerSelection, computerSelection);
+        let result = playRound(playerSelection, computerSelection);
         if (result == 0) roundsWon++;
         else if (result == 1) roundsLost++;
     }
