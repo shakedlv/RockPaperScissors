@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <section class="player" >
+            <button id="paper" onclick="selectPlayerPick('paper')">
+                <img src="./images/hand-paper.png" alt="paper">
+            </button>
+            <button id="rock" onclick="selectPlayerPick('rock')">
+                <img src="./images/rock.png" alt="rock">
+            </button>
+            <button id="scissors" onclick="selectPlayerPick('scissors')">
+                <img src="./images/scissors.png" alt="scissors">
+            </button>
+        </section>
+        <section class="pc">
+                <h1>PC</h1>
+        </section>
+        <section id="result"><h2 id="title">You Won!</h2> <button onclick="playAgain()" class="playAgain">Play Again! </button></section>
+    </main>
+</body>
+</html>
